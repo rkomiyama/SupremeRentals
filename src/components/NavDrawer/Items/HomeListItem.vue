@@ -1,11 +1,11 @@
 <template>
-  <router-link to="inventory" tag="div">
+  <router-link to="/" tag="div">
     <v-list-item link>
       <v-list-item-action>
-        <v-icon>mdi-car-side</v-icon>
+        <v-icon>mdi-home-circle</v-icon>
       </v-list-item-action>
       <v-list-item-content>
-        <v-list-item-title>Inventory</v-list-item-title>
+        <v-list-item-title>Home</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
   </router-link>
@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: 'InventoryListItem'
+  name: 'HomeListItem'
 }
 </script>
