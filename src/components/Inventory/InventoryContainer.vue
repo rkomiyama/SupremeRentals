@@ -1,35 +1,28 @@
 <template>
   <v-container fluid>
-    <v-layout
-      wrap
-    >
-      <v-flex
+    <v-layout wrap>
+      <InventoryCard
         v-for="(car, i) in inventory"
         :key="i"
-        xs12 sm6 md4 lg2
-      >
-        <v-card class="ma-1 elevation-5">
-          <v-card-title>Inventory</v-card-title>
-          <v-card-text>
-            <span>Lorem ipsum</span>
-          </v-card-text>
-        </v-card>
-      </v-flex>
+        :car="car"
+      />
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import InventoryCard from './InventoryCard'
+
 export default {
   name: 'InventoryContainer',
-  data () {
-    let inventory = new Array(20)
-    inventory.map((v, i) => {
-      inventory[i] = `Car ${i}`
+  computed: {
+    ...mapState({
+      inventory: state => state.inventory
     })
-    return {
-      inventory
-    }
+  },
+  components: {
+    InventoryCard
   }
 }
 </script>
