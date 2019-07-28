@@ -4,6 +4,7 @@
     expand
     nav
   >
+    <HomeListItem />
     <InventoryListItem />
     <AboutListItem />
     <ThemeListGroup />
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import HomeListItem from './HomeListItem'
 import InventoryListItem from './InventoryListItem'
 import AboutListItem from './AboutListItem'
 import ThemeListGroup from './ThemeListGroup'
@@ -18,6 +20,7 @@ import ThemeListGroup from './ThemeListGroup'
 export default {
   name: 'NavDrawerItems',
   components: {
+    HomeListItem,
     InventoryListItem,
     AboutListItem,
     ThemeListGroup
