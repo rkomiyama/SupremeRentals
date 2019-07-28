@@ -1,17 +1,15 @@
 <template>
-  <v-container fill-height>
-    <v-layout>
-      <NavDrawer
-        v-model="drawer"
-        @input:drawer="drawer = $event"
-      />
-      <AppBar
-        @click:drawer="drawer = !drawer"
-      />
-      <router-view />
-      <Footer />
-    </v-layout>
-  </v-container>
+  <v-layout fill-height>
+    <NavDrawer
+      v-model="drawer"
+      @input:drawer="drawer = $event"
+    />
+    <AppBar
+      @click:drawer="drawer = !drawer"
+    />
+    <router-view />
+    <Footer />
+  </v-layout>
 </template>
 
 <script>

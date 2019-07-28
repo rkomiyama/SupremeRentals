@@ -1,7 +1,7 @@
 <template>
   <v-content>
     <v-container fill-height>
-      <v-layout fill-height>
+      <v-layout>
         <v-card class="ma-auto">
           <v-card-title>Front Page</v-card-title>
           <v-card-text>

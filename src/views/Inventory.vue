@@ -1,14 +1,16 @@
 <template>
   <v-content>
-    <v-container fill-height>
-      <v-layout>
-        <v-card class="ma-auto">
-          <v-card-title>Inventory</v-card-title>
-          <v-card-text>
-            <span>Lorem ipsum</span>
-          </v-card-text>
-        </v-card>
-      </v-layout>
-    </v-container>
+    <InventoryContainer />
   </v-content>
 </template>
+
+<script>
+import InventoryContainer from '@/components/Inventory/InventoryContainer'
+
+export default {
+  name: 'Inventory',
+  components: {
+    InventoryContainer
+  }
+}
+</script>
