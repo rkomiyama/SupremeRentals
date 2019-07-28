@@ -1,27 +1,16 @@
 <template>
-  <v-app id="inspire">
-    <NavBar />
-    <SiteContent />
-    <Footer />
+  <v-app>
+    <MainSiteContainer />
   </v-app>
 </template>
 
 <script>
-import NavBar from './components/NavBar';
-import SiteContent from './components/SiteContent';
-import Footer from './components/Footer';
+import MainSiteContainer from '@/components/MainSiteContainer'
 
 export default {
+  name: 'App',
   components: {
-    NavBar,
-    SiteContent,
-    Footer
-  },
-  props: {
-    source: String,
-  },
-  created () {
-    this.$vuetify.theme.dark = true
-  },
+    MainSiteContainer
+  }
 }
 </script>
