@@ -3,33 +3,37 @@
     <v-layout
       wrap
     >
-      <v-flex
+      <InventoryCard
         v-for="(car, i) in inventory"
         :key="i"
-        xs12 sm6 md4 lg2
-      >
-        <v-card class="ma-1 elevation-5">
-          <v-card-title>Inventory</v-card-title>
-          <v-card-text>
-            <span>Lorem ipsum</span>
-          </v-card-text>
-        </v-card>
-      </v-flex>
+        :car="car"
+      />
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import InventoryCard from './InventoryCard'
+
 export default {
   name: 'InventoryContainer',
   data () {
-    let inventory = new Array(20)
-    inventory.map((v, i) => {
-      inventory[i] = `Car ${i}`
-    })
     return {
-      inventory
+      inventory: []
     }
+  },
+  created () {
+    for (let i = 0; i < 20; i++ ) {
+      this.inventory.push({
+        rate: 125,
+        year: 2016,
+        make: 'Mazda',
+        model: 'MX-5'
+      })
+    }
+  },
+  components: {
+    InventoryCard
   }
 }
 </script>
