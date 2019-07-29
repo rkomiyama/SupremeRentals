@@ -7,17 +7,18 @@
           column
           justify-center
         >
-          <h1 class="display-2 font-weight-normal mb-4">
-            SUPREME&nbsp;<span class="display-2 font-weight-thin">RENTALS</span>
-          </h1>
+          <v-flex xs12>
+            <h1 class="title-heading display-2 font-weight-normal mb-4">
+              <span>SUPREME </span><span class="display-2 font-weight-thin">RENTALS</span>
+            </h1>
+          </v-flex>
           <h4 class="subheading">
-            Find the perfect Benz today!
+            Find the perfect Benz today
           </h4>
         </v-layout>
-        <v-layout class="white elevation-3">
-          <v-container>
-            <v-layout wrap>
-              <v-flex xs12 sm4 class="mb-3 mx-2">
+        <v-layout>
+          <v-container grid-list-lg>
+            <v-layout d-flex justify-center row wrap>
                 <v-menu
                   v-model="fromMenu"
                   :close-on-content-click="false"
@@ -25,17 +26,19 @@
                   transition="scale-transition"
                   offset-y
                   full-width
-                  min-width="290px"
                 >
                   <template v-slot:activator="{ on }">
-                    <v-text-field
-                      v-model="fromDate"
-                      label="From"
-                      prepend-icon="mdi-calendar"
-                      readonly
-                      v-on="on"
-                      hide-details
-                    ></v-text-field>
+                    <v-flex xs12 sm4 md4>
+                      <v-text-field
+                        v-model="fromDate"
+                        label="From"
+                        prepend-icon="mdi-calendar"
+                        readonly
+                        v-on="on"
+                        hide-details
+                        dark
+                      ></v-text-field>
+                    </v-flex>
                   </template>
                   <v-date-picker
                     v-model="fromDate"
@@ -43,8 +46,6 @@
                     :min="minDate"
                   ></v-date-picker>
                 </v-menu>
-              </v-flex>
-              <v-flex xs12 sm4 class="mb-3 mx-2">
                 <v-menu
                   v-model="endMenu"
                   :close-on-content-click="false"
@@ -52,17 +53,19 @@
                   transition="scale-transition"
                   offset-y
                   full-width
-                  min-width="290px"
                 >
                   <template v-slot:activator="{ on }">
-                    <v-text-field
-                      v-model="endDate"
-                      label="Until"
-                      prepend-icon="mdi-calendar"
-                      readonly
-                      v-on="on"
-                      hide-details
-                    ></v-text-field>
+                    <v-flex xs12 sm4 md4>
+                      <v-text-field
+                        v-model="endDate"
+                        label="Until"
+                        prepend-icon="mdi-calendar"
+                        readonly
+                        v-on="on"
+                        hide-details
+                        dark
+                      ></v-text-field>
+                    </v-flex>
                   </template>
                   <v-date-picker
                     v-model="endDate"
@@ -70,12 +73,11 @@
                     :min="minDate"
                   ></v-date-picker>
                 </v-menu>
-              </v-flex>
-              <v-flex xs6 offset-xs3 sm2 offset-sm0 class="text-center my-auto">
-                <router-link to="/inventory" tag="div">
-                  <v-btn>Search</v-btn>
-                </router-link>
-              </v-flex>
+                <v-flex xs6 sm2 md1 class="text-center my-auto">
+                  <router-link to="/inventory" tag="button">
+                    <v-btn>Search</v-btn>
+                  </router-link>
+                </v-flex>
             </v-layout>
           </v-container>
         </v-layout>
@@ -111,5 +113,9 @@ export default {
 <style lang="scss" scoped>
 .front-page-content {
   height: 2000px;
+}
+.title-heading {
+  text-align: center;
+  word-wrap: break-word;
 }
 </style>
