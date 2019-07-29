@@ -9,3 +9,9 @@ export default {
   name: 'App'
 }
 </script>
+
+<style lang="scss">
+.no-user-select {
+  user-select: none
+}
+</style>
