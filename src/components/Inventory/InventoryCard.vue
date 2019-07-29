@@ -5,25 +5,27 @@
     <router-link
       :to="{
         name: 'vehicle',
-        params: {
-          id: car.id
-        }
+        params: { id: car.id }
       }"
       tag="div">
-      <v-card
-        class="ma-1 elevation-5"
-      >
-        <v-img
-          class="white--text"
-          :src="require('@/assets/white_and_red_NDs_small.jpg')"
-          gradient="to bottom, rgba(0,0,0,0), rgba(0,0,0,.5)"
+      <v-hover v-slot:default="{ hover }">
+        <v-card
+          class="ma-1 no-user-select"
+          :elevation="hover ? 12 : 2"
+          @click="() => {}"
         >
-          <v-card-title class="align-end fill-height">${{ car.rate }}/day</v-card-title>
-        </v-img>
-        <v-card-text>
-          <span>{{ car.year }} {{ car.make }} {{ car.model }}</span>
-        </v-card-text>
-      </v-card>
+          <v-img
+            class="white--text"
+            :src="require('@/assets/white_and_red_NDs_small.jpg')"
+            gradient="to bottom, rgba(0,0,0,0), rgba(0,0,0,.5)"
+          >
+            <v-card-title class="align-end fill-height">${{ car.rate }}/day</v-card-title>
+          </v-img>
+          <v-card-text>
+            <span>{{ car.year }} {{ car.make }} {{ car.model }}</span>
+          </v-card-text>
+        </v-card>
+      </v-hover>
     </router-link>
   </v-flex>
 </template>
