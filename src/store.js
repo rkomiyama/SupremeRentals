@@ -6,7 +6,7 @@ Vue.use(Vuex)
 let inventory = []
 for (let i = 0; i < 20; i++) {
   inventory.push({
-    id: i,
+    id: i.toString(),
     rate: 125,
     year: 2016,
     make: 'Mazda',

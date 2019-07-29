@@ -1,5 +1,5 @@
 <template>
-  <router-link to="inventory" tag="div">
+  <router-link to="/inventory" tag="div">
     <v-list-item link>
       <v-list-item-action>
         <v-icon>mdi-car-side</v-icon>
