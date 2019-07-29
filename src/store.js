@@ -7,6 +7,7 @@ let inventory = []
 for (let i = 0; i < 20; i++) {
   inventory.push({
     id: i.toString(),
+    image_url: "https://i.imgur.com/HxJFD2t.jpg",
     rate: 125,
     year: 2016,
     make: 'Mazda',

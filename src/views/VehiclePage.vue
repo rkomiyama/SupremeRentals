@@ -5,7 +5,7 @@
         <v-card  class="ma-auto elevation-5">
           <v-img
             class="white--text"
-            :src="require('@/assets/white_and_red_NDs_small.jpg')"
+            :src="car.image_url"
             gradient="to bottom, rgba(0,0,0,0), rgba(0,0,0,.5)"
           >
             <v-card-title class="align-end fill-height">${{ car.rate }}/day</v-card-title>
