@@ -2,20 +2,29 @@
   <v-flex
     xs12 sm6 md4 lg2
   >
-    <v-card
-      class="ma-1 elevation-5"
-    >
-      <v-img
-        class="white--text"
-        :src="require('@/assets/white_and_red_NDs_small.jpg')"
-        gradient="to bottom, rgba(0,0,0,0), rgba(0,0,0,.5)"
+    <router-link
+      :to="{
+        name: 'vehicle',
+        params: {
+          id: car.id
+        }
+      }"
+      tag="div">
+      <v-card
+        class="ma-1 elevation-5"
       >
-        <v-card-title class="align-end fill-height">${{ car.rate }}/day</v-card-title>
-      </v-img>
-      <v-card-text>
-        <span>{{ car.year }} {{ car.make }} {{ car.model }}</span>
-      </v-card-text>
-    </v-card>
+        <v-img
+          class="white--text"
+          :src="require('@/assets/white_and_red_NDs_small.jpg')"
+          gradient="to bottom, rgba(0,0,0,0), rgba(0,0,0,.5)"
+        >
+          <v-card-title class="align-end fill-height">${{ car.rate }}/day</v-card-title>
+        </v-img>
+        <v-card-text>
+          <span>{{ car.year }} {{ car.make }} {{ car.model }}</span>
+        </v-card-text>
+      </v-card>
+    </router-link>
   </v-flex>
 </template>
 
@@ -24,6 +33,7 @@ export default {
   name: 'InventoryCard',
   props: {
     car: {
+      id: String,
       rate: Number,
       year: Number,
       make: String,

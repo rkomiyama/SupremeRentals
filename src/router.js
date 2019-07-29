@@ -16,7 +16,12 @@ export default new Router({
         },
         {
           path: 'inventory',
-          component: () => import('@/views/Inventory')
+          component: () => import('@/views/Inventory'),
+        },
+        {
+          name: 'vehicle',
+          path: 'inventory/:id',
+          component: () => import('@/views/VehiclePage')
         },
         {
           path: 'about',

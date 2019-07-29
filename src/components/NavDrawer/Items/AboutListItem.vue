@@ -1,5 +1,5 @@
 <template>
-  <router-link to="about" tag="div">
+  <router-link to="/about" tag="div">
     <v-list-item link>
       <v-list-item-action>
         <v-icon>mdi-information</v-icon>
