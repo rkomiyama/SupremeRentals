@@ -133,19 +133,7 @@
                 <v-card-text>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec hendrerit nunc. Sed at hendrerit tortor. 
                   Nunc tristique felis non lorem blandit blandit. Morbi ante nunc, dignissim in varius eget, efficitur 
-                  ultrices urna. Nullam in viverra enim, ac euismod ex. Curabitur placerat iaculis euismod. Aenean eget 
-                  volutpat massa, blandit imperdiet nisl. Integer id massa odio. Quisque at elementum justo. Sed tincidunt 
-                  sagittis est, sed consectetur nibh tristique sed.<br><br>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec hendrerit nunc. Sed at hendrerit tortor. 
-                  Nunc tristique felis non lorem blandit blandit. Morbi ante nunc, dignissim in varius eget, efficitur 
-                  ultrices urna. Nullam in viverra enim, ac euismod ex. Curabitur placerat iaculis euismod. Aenean eget 
-                  volutpat massa, blandit imperdiet nisl. Integer id massa odio. Quisque at elementum justo. Sed tincidunt 
-                  sagittis est, sed consectetur nibh tristique sed.<br><br>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec hendrerit nunc. Sed at hendrerit tortor. 
-                  Nunc tristique felis non lorem blandit blandit. Morbi ante nunc, dignissim in varius eget, efficitur 
-                  ultrices urna. Nullam in viverra enim, ac euismod ex. Curabitur placerat iaculis euismod. Aenean eget 
-                  volutpat massa, blandit imperdiet nisl. Integer id massa odio. Quisque at elementum justo. Sed tincidunt 
-                  sagittis est, sed consectetur nibh tristique sed.
+                  ultrices urna. Nullam in viverra enim, ac euismod ex.
                 </v-card-text>
               </v-card>
             </v-flex>
