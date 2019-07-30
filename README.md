@@ -1,5 +1,7 @@
 # supreme-rentals
 
+https://rkomiyama.github.io/supreme-rentals/
+
 ## Project setup
 ```
 yarn install
