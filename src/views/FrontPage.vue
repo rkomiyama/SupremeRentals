@@ -86,11 +86,12 @@
       </v-parallax>
     </section>
     <section>
-      <v-layout
-        column
-        align-center
-      >
-        <v-container class="my-12">
+      <v-container class="my-12">
+        <v-layout
+          align-center
+          column
+          justify-center
+        >
           <v-flex xs12>
             <v-card flat class="transparent">
               <v-card-title>
@@ -115,38 +116,40 @@
               </v-card-text>
             </v-card>
           </v-flex>
-        </v-container>
-      </v-layout>
+        </v-layout>
+      </v-container>
     </section>
     <section>
-      <v-layout
-        column
-        align-center
-      >
-        <v-parallax src="https://i.imgur.com/3QZBfKh.png">
-          <v-container class="my-12 px-0">
+      <v-parallax src="https://i.imgur.com/3QZBfKh.png">
+        <v-container>
+          <v-layout
+            align-center
+            column
+            justify-center
+          >
             <v-flex xs12>
               <v-card flat dark class="transparent">
-                <v-card-title>
+                <v-card-title class="px-0">
                   Our Inventory
                 </v-card-title>
-                <v-card-text>
+                <v-card-text class="px-0">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec hendrerit nunc. Sed at hendrerit tortor. 
                   Nunc tristique felis non lorem blandit blandit. Morbi ante nunc, dignissim in varius eget, efficitur 
                   ultrices urna. Nullam in viverra enim, ac euismod ex.
                 </v-card-text>
               </v-card>
             </v-flex>
-          </v-container>
-        </v-parallax>
-      </v-layout>
+          </v-layout>
+        </v-container>
+      </v-parallax>
     </section>
     <section>
-      <v-layout
-        column
-        align-center
-      >
-        <v-container class="my-12">
+      <v-container class="my-12">
+        <v-layout
+          align-center
+          column
+          justify-center
+        >
           <v-flex xs12>
             <v-card flat class="transparent">
               <v-card-title>
@@ -171,8 +174,8 @@
               </v-card-text>
             </v-card>
           </v-flex>
-        </v-container>
-      </v-layout>
+        </v-layout>
+      </v-container>
     </section>
   </v-content>
 </template>
