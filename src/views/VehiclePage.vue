@@ -1,32 +1,34 @@
 <template>
   <v-content>
-    <v-container fill-height>
-      <v-layout>
-        <v-card  class="ma-auto elevation-5">
-          <v-img
-            class="white--text"
-            :src="car.image_url"
-            gradient="to bottom, rgba(0,0,0,0), rgba(0,0,0,.5)"
-          >
-            <v-card-title class="align-end fill-height">${{ car.rate }}/day</v-card-title>
-          </v-img>
-          <v-card-text>
-            <span>{{ car.year }} {{ car.make }} {{ car.model }}</span>
-          </v-card-text>
-        </v-card>
-      </v-layout>
-    </v-container>
+    <v-layout>
+      <v-flex x12>
+        <v-img
+          :src="car.image_url"
+          max-height=500
+        ></v-img>
+      </v-flex>
+    </v-layout>
+    <v-layout wrap>
+      <v-flex xs12 lg6 order-lg2>
+        <VehicleRequestForm />
+      </v-flex>
+      <v-flex xs12 lg6>
+        <VehicleInfo :car="car" />
+      </v-flex>
+    </v-layout>
   </v-content>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import VehicleInfo from '@/components/Vehicle/VehicleInfo'
+import VehicleRequestForm from '@/components/Vehicle/VehicleRequestForm'
 
 export default {
   name: 'VehiclePage',
   data () {
     return {
-      car: null
+      car: null,
     }
   },
   created () {
@@ -36,6 +38,10 @@ export default {
     ...mapGetters([
       'getVehicle'
     ])
+  },
+  components: {
+    VehicleInfo,
+    VehicleRequestForm
   }
 }
 </script>
